@@ -1,0 +1,34 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(250, 250, 250) !important;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+.cities {
+    font-size: 1.2rem;
+    width: 10rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    background-color: grey;
+}
+
+.card {
+    height: fit-content !important;
+    width: 100% !important;
+}
+
+@media (max-width: 425px) {
+    .cities {
+        font-size: 1rem !important;
+    }
+    .form-select-lg,
+    .form-control-lg {
+        font-size: 0.8rem !important;
+    }
+}

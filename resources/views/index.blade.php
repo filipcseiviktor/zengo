@@ -106,8 +106,6 @@
                     div.className = "cities mb-2";
                     div.setAttribute("id", data[i]["id"]);
                     div.setAttribute("value", data[i]["name"]);
-                    div.setAttribute("data-id", data[i]["id"]);
-                    div.setAttribute("data-role", "update");
                     div.innerHTML = data[i]["name"];
                    
                     document.getElementById('show').appendChild(div);
@@ -118,7 +116,7 @@
     });
 
     $(document).ready(function(){
-        $(document).on('click', 'div[data-role=update]',function(){
+        $(document).on('click', 'div[class="cities mb-2"]',function(){
             let id = $(this).attr('id');
             let actual_city = $("#"+id).text();
             
@@ -181,8 +179,6 @@
                 div.className = "cities mb-2";
                 div.setAttribute("value", data["name"]);
                 div.setAttribute("id", data["id"]); 
-                div.setAttribute("data-id", data["id"]);
-                div.setAttribute("data-role", "update");
                 div.innerHTML = data["name"];   
                 document.getElementById('show').appendChild(div);
                 

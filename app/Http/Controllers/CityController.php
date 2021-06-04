@@ -3,18 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\City;
-use App\County;
 use Illuminate\Http\Request;
 
 class CityController extends Controller
 {
-
-    public function index()
-    {
-        $counties = County::get();
-        return view('index', compact('counties'));
-    }
-
 
     public function store(Request $request)
     {

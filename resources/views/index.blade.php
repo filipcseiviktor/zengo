@@ -69,8 +69,8 @@
             <div class="modal-footer">
                 <input type="hidden" id="cityId">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
-                <button type="button" id="delete" class="btn btn-primary">Törlés</button>
-                <button type="button" id="update" class="btn btn-primary">Módosít</button>
+                <button type="button" id="delete" class="btn btn-danger">Törlés</button>
+                <button type="button" id="update" class="btn btn-success">Módosít</button>
             </div>
         </div>
         </div>

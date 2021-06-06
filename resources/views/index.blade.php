@@ -43,8 +43,9 @@
             </div>
             <div class="col-12 col-lg-6 d-flex justify-content-center d-none mt-5 mt-lg-0" id="card-cities">
                 <div class="card">
-                    <h3 class="card-header text-center">Városok</h3>
-                    <div class="card-body">
+                    <h3 class="card-header text-center" id="card-county-name"></h3>
+                    <div class="card-body d-flex align-items-center flex-column mb-5">
+                        <img class="mb-5" id="card-county-img">
                         <div id="show" class="d-flex align-items-center flex-column text-center"></div>
                     </div>
                   </div>
@@ -103,11 +104,15 @@
                 for(let i=0; i<data.length; i++){
 
                     let div = document.createElement("div");
+                    let card_name = document.getElementById("card-county-name");
+                    let card_img = document.getElementById("card-county-img")
+
                     div.className = "cities mb-2";
                     div.setAttribute("id", data[i]["id"]);
                     div.setAttribute("value", data[i]["name"]);
                     div.innerHTML = data[i]["name"];
-                   
+                    card_name.innerHTML = data[i]["county"]["name"] + " Megye";
+                    card_img.setAttribute("src", data[i]["county"]["image"]);
                     document.getElementById('show').appendChild(div);
                     
                 }

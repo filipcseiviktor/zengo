@@ -16,6 +16,7 @@ class CreateCountiesTable extends Migration
         Schema::create('counties', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image');
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->useCurrent();
         });

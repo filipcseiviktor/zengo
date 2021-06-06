@@ -23,8 +23,7 @@ class CityController extends Controller
     public function select(Request $request)
     {
         $county_id = $request->county_id;
-        $cities = City::where('county_id', $county_id)->get();
-
+        $cities = City::with('county')->where('county_id', $county_id)->get();
         return response()->json($cities);
     }
 
